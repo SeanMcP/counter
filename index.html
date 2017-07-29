@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
-		<link rel="stylesheet" href="css/main.css" type="text/css"/>
+		<title>Simple Counter</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700" rel="stylesheet">
+		<link rel="stylesheet" href="./css/main.css" type="text/css"/>
+		<link rel="icon" href="./img/favicon.png">
 	</head>
 	<body>
-		
+		<div id="siteWrap">
+			<h1>Simple Counter</h1>
+			<form id="counterForm" class="" action="index.html" method="post">
+				<button type="button" id="minusOne" name="minusOne" class="counterFunc">-</button>
+				<div id="screen"></div>
+				<button type="button" id="plusOne" name="plusOne" class="counterFunc">+</button>
+				<button type="button" id="resetVal" name="resetVal" >Reset</button>
+				<input type="number" id="startVal" name="startVal" value="" placeholder="Starting number" >
+				<button type="button" id="startValButton" name="button" >Start</button>
+			</form>
+		</div>
+		<footer id="mainFooter"><a href="http://seanmcp.com"><img src="./img/logo-whiteout.png" alt="&copy; Sean McPherson" title ="&copy; Sean McPherson"/></a>
+		</footer>
 		<script src="js/main.js"></script>
 	</body>
 </html>

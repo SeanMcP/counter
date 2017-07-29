@@ -1,3 +1,89 @@
 body {
-	
+	color: #333;
+}
+#siteWrap {
+	width: 98%;
+	max-width: 500px;
+	margin: 0 auto;
+}
+h1 {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 2.5em;
+	text-align: center;
+}
+#counterForm {
+	display: flex;
+	flex-flow: row wrap;
+}
+#counterForm > * {
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 700;
+	color: #333;
+	font-size: 4em;
+	padding: 1em 0;
+}
+.counterFunc {
+	flex: 0 0 25%;
+}
+#screen {
+	flex: 1 1 50%;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	background: white;
+	text-align: center;
+	overflow: hidden;
+}
+#resetVal {
+	flex: 1 1 100%;
+	font-size: 1.5em;
+	padding: 0.5em 0;
+	margin-top: 1em;
+}
+#startVal {
+	width: inherit;
+	flex: 1 1 10%;
+	font-size: 1em;
+	padding: 0.5em;
+	margin-top: 1em;
+}
+#startValButton {
+	flex: 0 0 25%;
+	font-size: 1em;
+	padding: 0.5em 0.25em;
+	margin-top: 1em;
+}
+footer {
+	text-align: center;
+	width: 100%;
+	background: #333;
+	position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+footer a {
+	padding: 0.5em 0 0.25em;
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.4);
+}
+footer img {
+	height: 1.25em;
+	opacity: 0.25;
+}
+footer img:hover {
+	opacity: 0.5;
+}
+footer img:active {
+	opacity: 0.3;
+}
+@media screen and (max-width: 250px) {
+	#startVal, #startValButton {
+		flex: 1 1 100%;
+	}
+	#startValButton {
+		margin-top: -1px;
+	}
 }
