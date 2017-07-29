@@ -4,7 +4,7 @@ body {
 #siteWrap {
 	width: 98%;
 	max-width: 500px;
-	margin: 0 auto;
+	margin: 0 auto 60px;
 }
 h1 {
 	font-family: 'Roboto Mono', monospace;
@@ -79,7 +79,15 @@ footer img:hover {
 footer img:active {
 	opacity: 0.3;
 }
-@media screen and (max-width: 250px) {
+@media screen and (max-width: 400px) {
+	h1 {
+		font-size: 2em;
+	}
+	#plusOne, #minusOne, #screen {
+		font-size: 2.5em;
+	}
+}
+@media screen and (max-width: 330px) {
 	#startVal, #startValButton {
 		flex: 1 1 100%;
 	}
