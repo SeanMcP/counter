@@ -23,8 +23,10 @@ resetVal.addEventListener('click', function(){
 })
 
 startValButton.addEventListener('click', function(){
-  let newStartVal = startVal.value;
-  screenValue = newStartVal;
-  startVal.value = "";
-  screen.innerHTML = screenValue;
+  if (startVal === true) {
+    let newStartVal = startVal.value;
+    screenValue = newStartVal;
+    startVal.value = "";
+    screen.innerHTML = screenValue;
+  }
 });
