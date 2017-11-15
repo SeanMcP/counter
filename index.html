@@ -12,14 +12,14 @@
 	<body>
 		<div id="siteWrap">
 			<h1>Simple Counter</h1>
-			<form id="counterForm" class="" action="index.html" method="post">
-				<button type="button" id="minusOne" name="minusOne" class="counterFunc">-</button>
+			<div id="counterForm">
+				<button type="button" id="minusOne" name="minusOne" class="counterFunc" onclick="increment('-')">-</button>
 				<div id="screen"></div>
-				<button type="button" id="plusOne" name="plusOne" class="counterFunc">+</button>
-				<button type="button" id="resetVal" name="resetVal" >Reset</button>
+				<button type="button" id="plusOne" name="plusOne" class="counterFunc" onclick="increment('+')">+</button>
+				<button type="button" id="resetVal" name="resetVal" onclick="reset()">Reset</button>
 				<input type="number" id="startVal" name="startVal" value="" placeholder="Starting number" >
 				<button type="button" id="startValButton" name="button" >Start</button>
-			</form>
+			</div>
 		</div>
 		<footer id="mainFooter"><a href="http://seanmcp.com"><img src="./img/logo-whiteout.png" alt="&copy; Sean McPherson" title ="&copy; Sean McPherson"/></a>
 		</footer>
