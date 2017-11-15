@@ -2,7 +2,7 @@ let output = document.getElementById("screen");
 let initial = document.getElementById("startVal");
 
 let screenValue = 0;
-output.innerHTML = screenValue;
+output.textContent = screenValue;
 
 increment = action => {
   if (action === '+') {
@@ -14,15 +14,15 @@ increment = action => {
 
 reset = () => {
   screenValue = 0;
-  output.innerHTML = screenValue;
+  output.textContent = screenValue;
   initial.value = "";
 }
 
-startValButton.addEventListener('click', function(){
+startValButton.addEventListener('click', () => {
   let newStartVal = initial.value;
   if (newStartVal) {
     screenValue = newStartVal;
+    output.textContent = screenValue;
     initial.value = "";
-    output.innerHTML = screenValue;
   }
 });
