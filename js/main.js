@@ -1,28 +1,28 @@
 let output = document.getElementById('screen');
 let initial = document.getElementById('startVal');
 
-let screenValue = 0;
-output.textContent = screenValue;
+let screenValue = Number(output.value);
 
 increment = action => {
+  screenValue = Number(output.value);
   if (action === '+') {
     screenValue += 2;
   }
   screenValue--;
-  output.textContent = screenValue;
+  output.value = screenValue;
 }
 
 reset = () => {
   screenValue = 0;
-  output.textContent = screenValue;
-  initial.value = '';
+  output.value = screenValue;
+  initial.value = null;
 }
 
-startValButton.addEventListener('click', () => {
-  let newStartVal = initial.value;
+startAt = () => {
+  let newStartVal = Number(initial.value);
   if (newStartVal) {
     screenValue = newStartVal;
-    output.textContent = screenValue;
-    initial.value = '';
+    output.value = screenValue;
+    initial.value = null;
   }
-});
+};

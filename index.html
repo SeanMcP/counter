@@ -14,11 +14,11 @@
 			<h1>Simple Counter</h1>
 			<div id="counterForm">
 				<button type="button" id="minusOne" name="minusOne" class="counterFunc" onclick="increment('-')">-</button>
-				<div id="screen"></div>
+				<input id="screen" value="0">
 				<button type="button" id="plusOne" name="plusOne" class="counterFunc" onclick="increment('+')">+</button>
 				<button type="button" id="resetVal" name="resetVal" onclick="reset()">Reset</button>
 				<input type="number" id="startVal" name="startVal" value="" placeholder="Starting number" >
-				<button type="button" id="startValButton" name="button" >Start</button>
+				<button type="button" id="startValButton" name="button" onclick="startAt()">Start</button>
 			</div>
 		</div>
 		<footer id="mainFooter"><a href="http://seanmcp.com"><img src="./img/logo-whiteout.png" alt="&copy; Sean McPherson" title ="&copy; Sean McPherson"/></a>
