@@ -1,6 +1,8 @@
 let output = document.getElementById('screen');
 let initial = document.getElementById('startVal');
 
+// Use Number() to convert numbered strings to numbers
+
 let screenValue = Number(output.value);
 
 increment = action => {
