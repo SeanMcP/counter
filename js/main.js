@@ -2,7 +2,7 @@ let output = document.getElementById('screen');
 let initial = document.getElementById('startVal');
 
 // Checks for for localStorage before initializing output screen value
-if (localStorage) {
+if (typeof(Storage) !== 'undefined') {
   output.value = localStorage.count;
 } else {
   output.value = 0;
@@ -12,10 +12,15 @@ if (localStorage) {
 let screenValue = Number(output.value);
 
 updateStorage = () => {
-  localStorage.count = Number(screenValue);
+  if (typeof(Storage) !== 'undefined') {
+    localStorage.count = Number(screenValue);
+  }
 }
 printOutput = () => {
-  output.value = localStorage.count ? localStorage.count : screenValue;
+  output.value = screenValue;
+  if (typeof(Storage) !== 'undefined') {
+    output.value = localStorage.count;
+  }
 }
 screenChange = () => {
   screenValue = Number(output.value);
