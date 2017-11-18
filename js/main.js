@@ -70,7 +70,7 @@ increment = action => {
 
 reset = () => {
   screenValue = 0;
-  countByValue = 0;
+  countByValue = 1;
   updateStorage();
   printOutput();
   initial.value = null;
@@ -85,3 +85,14 @@ startAt = () => {
     initial.value = null;
   }
 };
+
+// Quick count buttons
+let countButtons = document.getElementsByClassName('countDefault');
+
+for (let i = 0; i < countButtons.length; i++) {
+  countButtons[i].addEventListener('click', () => {
+    countByValue = Number(countButtons[i].innerHTML);
+    countBy.value = countByValue;
+    updateStorage();
+  })
+}
