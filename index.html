@@ -17,8 +17,8 @@
 				<input id="screen" type="number" onchange="screenChange()">
 				<button type="button" id="plusOne" name="plusOne" class="counterFunc" onclick="increment('+')">+</button>
 				<button type="button" id="resetVal" name="resetVal" onclick="reset()">Reset</button>
-				<input type="number" id="startVal" name="startVal" value="" placeholder="Starting number" >
-				<button type="button" id="startValButton" name="button" onclick="startAt()">Start</button>
+				<input type="number" id="startVal" name="startVal" value="" placeholder="Starting number" onchange="startAt()">
+				<button type="button" id="startValButton" name="button" onclick="startAt()">Update</button>
 				<div id="count" class="row">
 					<label for="countByField">Count by</label>
 					<input id="countByField" type="number" name="" value="" onchange="countByChange()">
