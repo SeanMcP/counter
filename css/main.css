@@ -72,6 +72,23 @@ button:active {
 	padding: 10px 5px;
 	margin-top: 20px;
 }
+.row {
+	display: flex;
+	flex-flow: row nowrap;
+}
+#count {
+	width: 100%;
+	font-size: 1em;
+}
+#count label {
+	padding-top: 13px;
+	padding-right: 10px;
+}
+#count input {
+	border: 1px solid #999;
+	flex: 1 50%;
+	padding: 10px;
+}
 footer {
 	text-align: center;
 	width: 100%;
