@@ -28,10 +28,14 @@ storageCheck = action => {
 
 // Number() required to convert string to number
 let screenValue = Number(output.value);
+let countByValue = Number(countBy.value);
 
 updateStorage = () => {
   storageCheck(
     localStorage.count = Number(screenValue)
+  );
+  storageCheck(
+    localStorage.increment = Number(countByValue)
   );
 }
 printOutput = () => {
@@ -39,25 +43,34 @@ printOutput = () => {
   storageCheck(
     output.value = localStorage.count
   );
+  countBy.value = countByValue;
+  storageCheck(
+    countBy.value = localStorage.increment
+  );
 }
 screenChange = () => {
   screenValue = Number(output.value);
+  updateStorage();
+}
+countByChange = () => {
+  countByValue = Number(countBy.value);
   updateStorage();
 }
 
 increment = action => {
   screenValue = Number(output.value);
   if (action === '+') {
-    screenValue += 2;
+    screenValue += 2 * countByValue;
     updateStorage();
   }
-  screenValue--;
+  screenValue -= countByValue;
   updateStorage();
   printOutput();
 };
 
 reset = () => {
   screenValue = 0;
+  countByValue = 0;
   updateStorage();
   printOutput();
   initial.value = null;
