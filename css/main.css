@@ -1,20 +1,25 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,button,input{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
 body {
 	color: #333;
 }
 #siteWrap {
-	width: 98%;
+	width: 100%;
 	max-width: 500px;
 	margin: 0 auto;
 	padding-bottom: 50px;
 }
 h1 {
+	text-align: center;
 	font-family: 'Roboto Mono', monospace;
 	font-size: 2.5em;
-	text-align: center;
+	font-weight: bold;
+	margin: 20px 10px;
 }
 #counterForm {
 	display: flex;
 	flex-flow: row wrap;
+	margin: 10px;
 }
 #counterForm > * {
 	font-family: 'Roboto Mono', monospace;
@@ -23,38 +28,49 @@ h1 {
 	font-size: 4em;
 	padding: 1em 0;
 }
+button {
+	background: #e0e0e0;
+	border: 1px solid #999;
+	border-radius: 0;
+}
+button:hover {
+	background: #eeeeee;
+}
+button:active {
+	background: #bdbdbd;
+}
 .counterFunc {
 	flex: 0 0 25%;
 }
 #screen {
-	flex: 1 1 50%;
+	background: white;
 	border: 0;
 	border-top: 1px solid #999;
 	border-bottom: 1px solid #999;
-	background: white;
+	flex: 1 1 25%;
 	text-align: center;
 	overflow: hidden;
 }
 #resetVal {
 	flex: 1 1 100%;
 	font-size: 1.5em;
-	padding: 0.5em 0;
-	margin-top: 1em;
+	padding: 10px 0;
+	margin-top: 20px;
 }
 #startVal {
 	border: 1px solid #999;
 	border-right: none;
 	flex: 1 1 10%;
 	font-size: 1em;
-	margin-top: 1em;
-	padding: 0.5em;
+	margin-top: 20px;
+	padding: 10px;
 	width: inherit;
 }
 #startValButton {
 	flex: 0 0 25%;
 	font-size: 1em;
-	padding: 0.5em 0.25em;
-	margin-top: 1em;
+	padding: 10px 5px;
+	margin-top: 20px;
 }
 footer {
 	text-align: center;

@@ -3,24 +3,36 @@ let initial = document.getElementById('startVal');
 
 // Checks for for localStorage before initializing output screen value
 if (typeof(Storage) !== 'undefined') {
+  if (!localStorage.count) {
+    // If there is no count in storage, initialize to zero
+    localStorage.count = 0;
+  }
   output.value = localStorage.count;
 } else {
+  // If storage is not available, initialize output to zero on load
   output.value = 0;
+}
+
+// Checks for storage before implementing action
+storageCheck = action => {
+  if (typeof(Storage) !== 'undefined') {
+    action;
+  }
 }
 
 // Number() required to convert string to number
 let screenValue = Number(output.value);
 
 updateStorage = () => {
-  if (typeof(Storage) !== 'undefined') {
-    localStorage.count = Number(screenValue);
-  }
+  storageCheck(
+    localStorage.count = Number(screenValue)
+  );
 }
 printOutput = () => {
   output.value = screenValue;
-  if (typeof(Storage) !== 'undefined') {
-    output.value = localStorage.count;
-  }
+  storageCheck(
+    output.value = localStorage.count
+  );
 }
 screenChange = () => {
   screenValue = Number(output.value);
