@@ -1,5 +1,6 @@
 let output = document.getElementById('screen');
 let initial = document.getElementById('startVal');
+let countBy = document.getElementById('countByField');
 
 // Checks for for localStorage before initializing output screen value
 if (typeof(Storage) !== 'undefined') {
@@ -8,9 +9,14 @@ if (typeof(Storage) !== 'undefined') {
     localStorage.count = 0;
   }
   output.value = localStorage.count;
+  if (!localStorage.increment) {
+    localStorage.increment = 1;
+  }
+  countBy.value = localStorage.increment;
 } else {
   // If storage is not available, initialize output to zero on load
   output.value = 0;
+  countBy.vaule = 1;
 }
 
 // Checks for storage before implementing action
